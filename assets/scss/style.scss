@@ -2,14 +2,26 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
 }
 
-.link-active {
+a {
 	text-decoration: none;
+	color: white;
+}
+
+.custom-link-active {
 	color: #05a872;
 }
 
-.link-exact-active {
-	text-decoration: none;
+.custom-link-exact-active {
+	color: #11c0c0;
+}
+
+hr.nav {
+	background-color: #05a872;
 	color: #05a872;
+	height: 1px;
+	border-width: 0;
+	margin: 10px 5px;
 }
