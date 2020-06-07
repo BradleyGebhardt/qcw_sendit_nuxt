@@ -12,4 +12,8 @@
 export default {}
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.nav__icon {
+	margin-top: 10px;
+}
+</style>
