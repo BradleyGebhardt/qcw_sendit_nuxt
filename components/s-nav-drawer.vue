@@ -1,12 +1,18 @@
 <template>
-	<div :class="{ side: true, side__expanded: expanded }">
-		<ul>
-			<li>
-				<nuxt-link to="/">
-					Home
-				</nuxt-link>
-			</li>
-		</ul>
+	<div>
+		<div
+			:class="{ overlay: true, overlay__expanded: expanded }"
+			@click="emitModel()"
+		></div>
+		<div :class="{ side: true, side__expanded: expanded }">
+			<ul>
+				<li>
+					<nuxt-link to="/">
+						Home
+					</nuxt-link>
+				</li>
+			</ul>
+		</div>
 	</div>
 </template>
 
@@ -15,15 +21,56 @@ export default {
 	name: 'NavDrawer',
 
 	props: {
-		expanded: {
+		value: {
 			type: Boolean,
-			required: true,
+		},
+	},
+
+	data() {
+		return {
+			expanded: false,
+		}
+	},
+
+	watch: {
+		value: {
+			handler() {
+				this.expanded = this.value
+			},
+		},
+	},
+
+	created() {
+		this.setExpanded()
+	},
+
+	methods: {
+		setExpanded() {
+			this.expanded = this.value
+		},
+
+		emitModel() {
+			this.expanded = false
+			this.$emit('input', this.expanded)
 		},
 	},
 }
 </script>
 
 <style lang="scss" scoped>
+.overlay {
+	position: absolute;
+	// display: block;
+	// background-color: red;
+	left: 0;
+	top: 0;
+	height: 100vh;
+
+	&__expanded {
+		right: 200px;
+	}
+}
+
 .side {
 	position: absolute;
 	top: 0;

@@ -1,6 +1,6 @@
 <template>
 	<div class="app-content">
-		<s-nav-drawer :expanded="nav" />
+		<s-nav-drawer v-model="nav" />
 		<s-app-bar>
 			<button
 				:class="{ ni: true, ni__expanded: nav }"
@@ -9,6 +9,7 @@
 				<s-nav-icon />
 			</button>
 		</s-app-bar>
+		{{ nav }}
 		<nuxt />
 	</div>
 </template>
