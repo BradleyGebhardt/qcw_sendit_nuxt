@@ -79,6 +79,7 @@ $side-width: 250px;
 	left: 0;
 	top: 0;
 	height: 100vh;
+	z-index: 89;
 
 	&__expanded {
 		right: $side-width;
@@ -86,6 +87,7 @@ $side-width: 250px;
 }
 
 .side {
+	z-index: 99;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -100,6 +102,7 @@ $side-width: 250px;
 	h1 {
 		font-weight: 100;
 		text-align: center;
+		margin-top: 10px;
 	}
 
 	ul {
