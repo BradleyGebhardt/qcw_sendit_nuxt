@@ -1,5 +1,5 @@
 <template>
-	<div class="wrapper">
+	<div ref="wrapper" class="wrapper">
 		<input
 			v-model="inputVal"
 			name="input"
@@ -19,6 +19,11 @@ export default {
 		value: {
 			type: String,
 			default: '',
+		},
+
+		width: {
+			type: String,
+			default: '100%',
 		},
 
 		type: {
@@ -45,9 +50,19 @@ export default {
 
 	created() {},
 
+	mounted() {
+		this.setWidth()
+	},
+
 	methods: {
 		setModel() {
 			this.inputVal = this.value
+		},
+
+		setWidth() {
+			const width = Number(this.width)
+			if (!isNaN(width)) this.$refs.wrapper.style.maxWidth = `${width}px`
+			else this.$refs.wrapper.style.maxWidth = this.width
 		},
 
 		emitValue() {
@@ -62,7 +77,6 @@ export default {
 	position: relative;
 	height: 50px;
 	width: 100%;
-	max-width: 200px;
 	color: white;
 
 	input {
