@@ -1,5 +1,5 @@
 <template>
-	<div ref="wrapper" class="wrapper">
+	<div ref="wrapper" class="s-text-field">
 		<input
 			v-model="inputVal"
 			name="input"
@@ -73,7 +73,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.wrapper {
+.s-text-field {
 	position: relative;
 	height: 50px;
 	width: 100%;
