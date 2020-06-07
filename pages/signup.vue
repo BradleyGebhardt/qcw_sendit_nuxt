@@ -1,7 +1,7 @@
 <template>
 	<div class="wrapper">
 		<form @submit.prevent>
-			<s-text-field v-model="user.email" label="Email" />
+			<s-text-field v-model="user.email" label="Email" width="400" />
 			{{ user.email }}
 		</form>
 	</div>
