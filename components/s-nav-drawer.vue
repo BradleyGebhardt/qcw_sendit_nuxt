@@ -2,7 +2,7 @@
 	<div>
 		<div
 			:class="{ overlay: true, overlay__expanded: expanded }"
-			@click="emitModel()"
+			@click="emitModel(false)"
 		></div>
 		<div :class="{ side: true, side__expanded: expanded }">
 			<h1>Navigation</h1>
@@ -50,6 +50,12 @@ export default {
 				this.expanded = this.value
 			},
 		},
+
+		$route: {
+			handler() {
+				this.emitModel(false)
+			},
+		},
 	},
 
 	created() {
@@ -61,8 +67,8 @@ export default {
 			this.expanded = this.value
 		},
 
-		emitModel() {
-			this.expanded = false
+		emitModel(val) {
+			this.expanded = val
 			this.$emit('input', this.expanded)
 		},
 	},
