@@ -9,7 +9,6 @@
 				<s-nav-icon />
 			</button>
 		</s-app-bar>
-		{{ nav }}
 		<nuxt />
 	</div>
 </template>
@@ -41,7 +40,7 @@ export default {
 	transition: all 0.3s ease;
 
 	&__expanded {
-		margin-right: 210px;
+		margin-right: 260px;
 	}
 }
 
