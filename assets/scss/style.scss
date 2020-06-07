@@ -1,3 +1,5 @@
+@import '~/assets/scss/vars.scss';
+
 * {
 	padding: 0;
 	margin: 0;
@@ -6,7 +8,7 @@
 }
 
 body {
-	background-color: #24242d;
+	background-color: $background;
 }
 
 a {
@@ -15,7 +17,7 @@ a {
 }
 
 .custom-link-active {
-	color: #05a872;
+	color: $green;
 }
 
 .custom-link-exact-active {
@@ -24,8 +26,40 @@ a {
 
 hr.nav {
 	background-color: #05a872;
-	color: #05a872;
+	color: $green;
 	height: 1px;
 	border-width: 0;
 	margin: 10px 5px;
 }
+
+// .m-1 {
+// 	margin: 0.25rem;
+// }
+
+// .m-2 {
+// 	margin: 0.5rem;
+// }
+
+// .m-3 {
+// 	margin: 0.75rem;
+// }
+
+// .m-3 {
+// 	margin: 1rem;
+// }
+
+// .my-1 {
+// 	margin: 0.25rem 0;
+// }
+
+// .my-2 {
+// 	margin: 0.5rem 0;
+// }
+
+// .my-3 {
+// 	margin: 0.75rem 0;
+// }
+
+// .my-4 {
+// 	margin: 2rem 0;
+// }
