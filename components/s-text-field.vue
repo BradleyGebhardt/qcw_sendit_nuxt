@@ -73,6 +73,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~/assets/scss/vars.scss';
+
 .s-text-field {
 	position: relative;
 	height: 50px;
@@ -103,6 +105,7 @@ export default {
 			}
 
 			span {
+				color: $green;
 				transform: translateY(-150%);
 			}
 		}
