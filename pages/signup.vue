@@ -3,7 +3,7 @@
 		<form @submit.prevent>
 			<!-- Header -->
 			<h1>
-				Login to Send it
+				Create an account with Send it
 			</h1>
 
 			<!-- Email -->
@@ -24,9 +24,20 @@
 				class="pass"
 			/>
 
-			<button class="next">
-				Next
-			</button>
+			<!-- Password Confirmation -->
+			<s-text-field
+				v-model="confPass"
+				label="Confirm password"
+				type="password"
+				width="500"
+				class="pass"
+			/>
+
+			<nuxt-link to="/creator/inquire">
+				<button class="next">
+					Signup
+				</button>
+			</nuxt-link>
 		</form>
 	</div>
 </template>
@@ -41,6 +52,7 @@ export default {
 				email: '',
 				password: '',
 			},
+			confPass: '',
 		}
 	},
 }
@@ -62,12 +74,8 @@ export default {
 		color: white;
 	}
 
-	.email {
-		margin: 30px auto;
-	}
-
-	.pass {
-		margin: 30px auto;
+	.s-text-field {
+		margin: 40px auto;
 	}
 
 	form {
@@ -83,19 +91,7 @@ export default {
 		display: block;
 		width: 90%;
 		padding: 10px 0;
-		background-color: $green;
-		color: white;
-		border: none;
 		margin: 0 auto;
-		cursor: pointer;
-
-		&:focus {
-			outline: none;
-		}
-
-		&:hover {
-			background-color: $button-hover;
-		}
 	}
 }
 
