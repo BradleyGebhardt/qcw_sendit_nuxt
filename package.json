@@ -17,7 +17,10 @@
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/pwa": "^3.0.0-0",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "videojs-contrib-quality-levels": "^2.0.9",
+    "videojs-errors": "^4.3.2",
+    "videojs-hls-quality-selector": "^1.1.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",
@@ -33,6 +36,7 @@
     "node-sass": "^4.14.1",
     "prettier": "^1.19.1",
     "sass-loader": "^8.0.2",
+    "video.js": "^7.7.5",
     "vue-jest": "^4.0.0-0"
   }
 }
