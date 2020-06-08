@@ -7,6 +7,15 @@
 	font-family: 'Roboto', sans-serif;
 }
 
+// Remove the highlight color on click
+input,
+textarea,
+button,
+select,
+a {
+	-webkit-tap-highlight-color: #00000000;
+}
+
 body {
 	background-color: $background;
 }
@@ -30,6 +39,33 @@ hr.nav {
 	height: 1px;
 	border-width: 0;
 	margin: 10px 5px;
+}
+
+button {
+	border: none;
+	cursor: pointer;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+button.next {
+	background-color: $green;
+	color: white;
+
+	&:hover {
+		background-color: $green-hover;
+	}
+}
+
+button.cancel {
+	background-color: $red;
+	color: white;
+
+	&:hover {
+		background-color: $red-hover;
+	}
 }
 
 // .m-1 {
