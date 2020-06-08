@@ -57,6 +57,8 @@ export default {
 		'@nuxtjs/dotenv',
 		// Doc: https://github.com/nuxt/components
 		'@nuxt/components',
+		// Doc: https://firebase.nuxtjs.org/guide/introduction/
+		'@nuxtjs/firebase',
 	],
 
 	/**
@@ -70,6 +72,34 @@ export default {
 	router: {
 		linkActiveClass: 'custom-link-active',
 		linkExactActiveClass: 'custom-link-exact-active',
+	},
+
+	/**
+	 * Firebase config
+	 */
+	firebase: {
+		config: {
+			apiKey: 'AIzaSyDz98S32PS2CcqWWwF7UolYX_wnbHoDSE0',
+			authDomain: 'qcw-sendit-nuxt.firebaseapp.com',
+			databaseURL: 'https://qcw-sendit-nuxt.firebaseio.com',
+			projectId: 'qcw-sendit-nuxt',
+			storageBucket: 'qcw-sendit-nuxt.appspot.com',
+			messagingSenderId: '193801489161',
+			appId: '1:193801489161:web:9dd6bbfd733d5047bb61d8',
+			measurementId: 'G-V71XBSHKWJ',
+		},
+
+		services: {
+			auth: false,
+			firestore: false,
+			functions: false,
+			storage: false,
+			realtimeDb: false,
+			messaging: false,
+			performance: false,
+			analytics: false,
+			remoteConfig: false,
+		},
 	},
 
 	/*
